@@ -1,0 +1,6 @@
+---
+ports_packages:
+  - name: ccache
+  - name: portfmt
+  - name: portlint
+  - name: sudo

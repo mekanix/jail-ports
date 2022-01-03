@@ -1,0 +1,14 @@
+---
+- name: install ports packages
+  with_items: "{{ ports_packages }}"
+  package:
+    name: "{{ item.name }}"
+    state: latest
+
+- name: setup make.conf template
+  template:
+    src: "make.conf.j2"
+    dest: "/etc/make.conf"
+    owner: "root" 
+    group: "wheel"
+    mode: 0644
